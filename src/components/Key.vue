@@ -11,14 +11,7 @@ import { createKeyList, createObj } from '../util/shared';
 const modifiers = createModifiers()
 const { modifiersUsed } = useKeyboardStateStore()
 
-interface KeyProps extends KeyOptions {
-    board: {
-        reactive: KeyReactivityOptions | undefined
-        aliasMap: Record<string, string>
-    }
-}
-
-const props = withDefaults(defineProps<KeyProps>(), {
+const props = withDefaults(defineProps<KeyOptions>(), {
     width: 1,
     content: () => [],
     reactive: undefined,

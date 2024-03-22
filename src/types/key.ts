@@ -30,4 +30,8 @@ export interface KeyOptions {
     }[]
     // _modifiersUsedInCurrentState?: KeyBoardModifier[]
     reactive?: KeyReactivityOptions
+    board: {
+        reactive: KeyReactivityOptions | undefined
+        aliasMap: Record<string, string>
+    }
 }
