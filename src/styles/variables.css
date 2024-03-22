@@ -1,0 +1,28 @@
+:root {
+    --vks-keyboard-bg: white;
+    --vks-keyboard-border: white;
+
+    --vks-key-bg: white;
+    --vks-key-text: black;
+
+    --vks-key-border-outer: green;
+    --vks-key-border-inner: yellow;
+    --vks-key-border-press: pink;
+    --vks-key-border-bottom: red;
+
+    --vks-key-height: 50px;
+    --vks-key-font-size: 10px;
+    --vks-border-radius: 6px;
+
+    --vks-key-opacity-enabled: 1;
+    --vks-key-opacity-disabled: 0.4;
+
+    --vtk-key-bg-active: white;
+    --vtk-key-bg-shift: green;
+    --vtk-key-bg-control: purple;
+    --vtk-key-bg-alt: blue;
+    --vtk-key-bg-control-shift: orange;
+    --vtk-key-bg-control-alt: white;
+    --vtk-key-bg-shift-alt: yellow;
+    --vtk-key-bg-control-shift-alt: red;
+}
