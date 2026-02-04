@@ -1,0 +1,54 @@
+{
+    "Engine_Editor": {
+        "w": [
+            { "label": "test" }
+        ],
+        "Space": [
+            {
+                "label": "Jump"
+            },
+            {
+                "label": "Jump high",
+                "events": [
+                    "Control"
+                ]
+            },
+            {
+                "label": "Jump higher",
+                "events": [
+                    "Control",
+                    "Shift"
+                ]
+            },
+            {
+                "label": "Jump high than ever",
+                "events": [
+                    "Control",
+                    "Shift",
+                    "Alt"
+                ]
+            },
+            {
+                "label": "Duck low",
+                "events": [
+                    "Shift"
+                ]
+            },
+            {
+                "label": "Duck lower",
+                "events": [
+                    "Shift",
+                    "Alt"
+                ]
+            }
+        ]
+    },
+    "Blender_View": {
+        "a": [],
+        "b": []
+    },
+    "Blender_Sculpting": {
+        "c": [],
+        "d": []
+    }
+}

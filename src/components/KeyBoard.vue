@@ -14,11 +14,9 @@ const props = withDefaults(defineProps<KeyboardOptions>(), {
     aliasMap: () => ({}),
 })
 
-// TODO: why TF are there two stores????
-const store = useKeyboardStateStore()
-store.setActiveKeyboard(props)
-
 const keyboardState = useKeyboardStateStore()
+keyboardState.setActiveKeyboard(props)
+
 const refs = keyboardState.createLabelRefs()
 const filters = ref<KeyboardFilter[]>([])
 
@@ -45,7 +43,7 @@ const onChange = (event: Event, filter: KeyboardFilter) => {
                 <div class="keyboard-key" v-for="key in row.map(convertKeyFromOptions)" :key="key.index">
                     <KeySeparator v-if="key.type === 'seperator'" :width="key.width" />
                     <Key v-else :label="key.label" :board="{ reactive: $props.reactive, aliasMap: $props.aliasMap! }"
-                        :width="key.width" :colors="colors" :content="states[store.currentState][key.label]" />
+                        :width="key.width" :colors="colors" :content="states[keyboardState.currentState][key.label]" />
                 </div>
             </div>
         </div>

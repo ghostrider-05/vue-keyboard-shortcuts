@@ -1,6 +1,6 @@
 {
   "name": "vue-keyboard-shortcuts",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "./src/index.ts",
   "files": ["src"],
@@ -11,11 +11,11 @@
   "author": "ghostrider-05",
   "license": "ISC",
   "dependencies": {
-    "@vueuse/core": "^10.9.0",
-    "pinia": "^2.1.7",
-    "vue": "^3.4.21"
+    "@vueuse/core": "^14.2.0",
+    "pinia": "^3.0.4",
+    "vue": "^3.5.27"
   },
   "devDependencies": {
-    "typescript": "^5.4.3"
+    "typescript": "^5.9.3"
   }
 }

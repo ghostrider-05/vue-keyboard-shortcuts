@@ -83,7 +83,9 @@ export type KeyboardDefineByFunctionOptions<S extends string = string> = {
     [State in S]: KeyboardFunctionState
 }
 
-export function defineKeyboardStatesByFunction <S extends string = string>(states: KeyboardDefineByFunctionOptions<S>) {
+export function defineKeyboardStatesByFunction <S extends string = string>(
+    states: KeyboardDefineByFunctionOptions<S>,
+) {
     function convertState (state: KeyBoardByFunctionStates<S>[S]) {
         return Object.keys(state).reduce((options, label) => {
             const value = state[label]

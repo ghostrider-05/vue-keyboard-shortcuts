@@ -1,14 +1,7 @@
 import { useKeyModifier, type UseKeyModifierReturn, type UseModifierOptions } from "@vueuse/core"
 
 import type { KeyBoardModifier } from "../types/modifier"
-import { keyof } from "./shared"
-
-const createObj = <T extends string, V>(keys: T[], value: (key: T) => V): Record<T, V> => {
-    return keys.reduce((obj, key) => ({
-        ...obj,
-        [key]: value(key),
-    }), {} as Record<T, V>)
-}
+import { createObj, keyof } from "./shared"
 
 const useModifierOptions: UseModifierOptions<false> = {
     initial: false,

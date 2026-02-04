@@ -5,7 +5,7 @@ import { useMagicKeys, useMousePressed } from '@vueuse/core';
 import { useKeyboardStateStore } from '../composables/'
 import { createModifiers, keyModifiers } from '../util/modifiers';
 
-import type { KeyOptions, KeyReactivityOptions } from '../types/key';
+import type { KeyOptions } from '../types/key';
 import { createKeyList, createObj } from '../util/shared';
 
 const modifiers = createModifiers()
@@ -16,6 +16,7 @@ const props = withDefaults(defineProps<KeyOptions>(), {
     content: () => [],
     reactive: undefined,
 })
+// The keyboard element to register mouse clicks
 const el = ref(null)
 
 function isReactive (k: 'click' | 'type'): boolean {
@@ -46,8 +47,12 @@ const activeContent = computed(() => {
 })
 
 const color = computed(() => {
-    return Object.entries(props.colors)
-        .find(([, events]) => activeContent.value?.events ? activeContent.value.events.length === events.length && activeContent.value.events.every(e => events.includes(e)) : false)?.[0] ?? 'var(--vks-key-bg)'
+    return Object.entries(props.colors).find(([, events]) => {
+        const activeEvents = activeContent.value?.events
+        if (!activeEvents) return false
+
+        return activeEvents.length === events.length && activeEvents.every(event => events.includes(event))
+    })?.[0] ?? 'var(--vks-key-bg)'
 })
 
 const isModifier = Object.keys(keyModifiers).concat('Ctrl').includes(props.label)

@@ -1,0 +1,20 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev src",
+    "docs:preview": "vitepress preview src",
+    "docs:build": "vitepress build src",
+    "deploy": "npm run docs:build && npx wrangler deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "^1.6.4",
+    "wrangler": "^4.62.0"
+  }
+}

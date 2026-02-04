@@ -27,9 +27,3 @@ export function convertKeyFromOptions (def: KeyBoardKeyOption, index: number): C
         index
     }
 }
-
-// type KeyboardMultiLevelStates<S extends string = string> = Record<string, Record<string, KeyboardMultiLevelStates<S>> | KeyboardOptions<S>['states']>
-
-// function flattenStates<S extends string = string>(states: KeyboardMultiLevelStates<S>, joinChar: string, parents?: string[]): KeyboardOptions<S>['states'] {
-
-// }

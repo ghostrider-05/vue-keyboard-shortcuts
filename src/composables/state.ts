@@ -30,18 +30,8 @@ export const useKeyboardStateStore = defineStore('keyboardState', () => {
         states.value = options.states
     }
 
-    /** @deprecated */
-    function switchToKeyboard (options: KeyboardOptions): void {
-        setActiveKeyboard(options)
-    }
-
     function isValidState (state: string) {
         return keyof(states.value).includes(state)
-    }
-
-    /** @deprecated */
-    function combineToState (parts: string[]) {
-        setCurrentState(parts)
     }
 
     /** @private */
@@ -137,10 +127,8 @@ export const useKeyboardStateStore = defineStore('keyboardState', () => {
         modifiersUsed,
         keyLabels,
         stateLabelLength,
-        combineToState,
         setActiveKeyboard,
         setCurrentState,
-        switchToKeyboard,
         createLabelRefs,
         createRefLabelGetter,
         updateRef,
